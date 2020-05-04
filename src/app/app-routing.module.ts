@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+import { HomePageComponent } from './home-page/home-page.component';
+import { DetailsPageComponent } from './details-page/details-page.component';
+import { ToDoListComponent } from './to-do-list/to-do-list.component';
+
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
+  {path: '', component: HomePageComponent},
+  {path: 'details', component: DetailsPageComponent},
+  {path: 'todo', component: ToDoListComponent},
 ];
 
 @NgModule({

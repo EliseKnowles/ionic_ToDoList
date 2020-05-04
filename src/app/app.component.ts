@@ -10,6 +10,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+
+  poulet: string = "poulet"; 
+  iftrue : boolean = false;
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -24,4 +28,13 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  test(){
+    console.log('hello')
+  }
+
+  toggle(){
+    this.iftrue = !this.iftrue
+  }
+  
 }
